@@ -2,13 +2,12 @@
 export {ImageDataType, ImageType, ImageTypeEnum} from './types';
 
 // LOADERS AND WRITERS
-export {default as ImageLoader} from './image-loader';
-export {default as ImageWriter} from './image-writer';
+export {ImageLoader, ImageWriter} from '@loaders.gl/image';
 
 // IMAGE CATEGORY API
 
 // Binary Image API
-export {getBinaryImageMetadata} from './lib/category-api/binary-image-api';
+export {getBinaryImageMetadata} from '@loaders.gl/image';
 
 // Parsed Image API
 export {isImageTypeSupported, getDefaultImageType} from './lib/category-api/image-type';
@@ -28,9 +27,7 @@ export {loadImageCube} from './lib/texture-api/load-image-cube';
 // DEPRECATED
 // TODO - Remove in V3
 
-export {default as HTMLImageLoader} from './image-loader';
-
-import {getDefaultImageType} from './lib/category-api/image-type';
+export {default as HTMLImageLoader} from '@loaders.gl/image';
 
 export function getSupportedImageType(imageType?);
 

@@ -1,7 +1,7 @@
-// Image loading/saving for browser and Node.js
-/* global document, ImageBitmap, ImageData */
-import {global} from '../utils/globals';
-import {getImageSize} from '../category-api/parsed-image-api';
+// Image loading/saving for browser
+/* global document, HTMLCanvasElement, Image */
+
+import {assert, global} from '@loaders.gl/loader-utils';
 
 // @ts-ignore TS2339: Property does not exist on type
 const {_encodeImageNode} = global;

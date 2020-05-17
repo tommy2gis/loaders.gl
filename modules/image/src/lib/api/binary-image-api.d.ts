@@ -6,7 +6,7 @@
 };
 
 /**
- * Determines if the "raw" memory 
+ * Determines if the "raw" memory
  * Currently supports `image/png`, `image/jpeg`, 'image/gif`, `image/bmp`.
  * @param binaryData "raw" memory to inspect
  */

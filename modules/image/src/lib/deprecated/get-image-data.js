@@ -1,30 +1,8 @@
 /* global Image, ImageBitmap */
 import {assert} from '@loaders.gl/loader-utils';
 
-export function isImage(image) {
-  return Boolean(getImageTypeOrNull(image));
-}
-
-export function deleteImage(image) {
-  switch (getImageType(image)) {
-    case 'imagebitmap':
-      image.close();
-      break;
-    default:
-    // Nothing to do for images and image data objects
-  }
-}
-
-export function getImageType(image) {
-  const format = getImageTypeOrNull(image);
-  if (!format) {
-    throw new Error('Not an image');
-  }
-  return format;
-}
-
 export function getImageData(image) {
-  switch (getImageType(image)) {
+  switch (getImageTypeOrNull(image)) {
     case 'data':
       return image;
 
@@ -43,11 +21,6 @@ export function getImageData(image) {
       return assert(false);
   }
 }
-
-// TODO DEPRECATED not needed (use getImageData)
-export {getImageData as getImageSize};
-
-// PRIVATE
 
 // eslint-disable-next-line complexity
 function getImageTypeOrNull(image) {
