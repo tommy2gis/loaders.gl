@@ -17,7 +17,8 @@ export {
   isImage,
   getImageType,
   getImageSize,
-  getImageData
+  getImageData,
+  getImageDataAsync
 } from './lib/category-api/parsed-image-api';
 
 // Texture Loading API

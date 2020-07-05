@@ -1,8 +1,6 @@
 require('reify');
-
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 require('@loaders.gl/polyfills');
+const {Bench} = require('@probe.gl/Bench');
 const {addModuleBenchmarksToSuite} = require('./modules');
 
 const suite = new Bench({
