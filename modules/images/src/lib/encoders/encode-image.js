@@ -1,7 +1,6 @@
-// Image loading/saving for browser
-/* global document, HTMLCanvasElement, Image */
-
-import {assert, global} from '@loaders.gl/loader-utils';
+// Image loading/saving for browser and Node.js
+/* global document, ImageBitmap, ImageData */
+import {global} from '@loaders.gl/loader-utils';
 
 // @ts-ignore TS2339: Property does not exist on type
 const {_encodeImageNode} = global;
@@ -79,4 +78,13 @@ function drawImageToCanvas(image, canvas, x = 0, y = 0) {
   // Fall back to generic image/image bitmap rendering path
   context.drawImage(image, 0, 0);
   return canvas;
+}
+
+function getImageSize(image) {
+  // For Image
+  if (Number.isFinite(image.naturalWidth)) {
+    return {width: image.naturalWidth, height: image.naturalHeight};
+  }
+  // For ImageBitmap and image data objects
+  return {width: image.width, height: image.height};
 }

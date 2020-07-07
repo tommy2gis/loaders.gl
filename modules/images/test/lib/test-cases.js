@@ -1,6 +1,6 @@
 import {isBrowser} from '@loaders.gl/core';
 
-const CONTENT_BASE = '@loaders.gl/image-api/test/data';
+const CONTENT_BASE = '@loaders.gl/images/test/data';
 
 // eslint-disable-next-line quotes
 const PNG_BITS = `\

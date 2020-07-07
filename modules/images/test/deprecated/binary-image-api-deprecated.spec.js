@@ -3,7 +3,7 @@
 
 import test from 'tape-promise/tape';
 
-import {isBinaryImage, getBinaryImageMIMEType, getBinaryImageSize} from '@loaders.gl/image-api';
+import {isBinaryImage, getBinaryImageMIMEType, getBinaryImageSize} from '@loaders.gl/images';
 import {loadImages} from '@loaders.gl/images/test/lib/binary-image-api.spec';
 
 test('isBinaryImage (deprecated)', async t => {

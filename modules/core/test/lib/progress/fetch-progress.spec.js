@@ -1,7 +1,7 @@
 import test from 'tape-promise/tape';
 import {fetchFile, _fetchProgress} from '@loaders.gl/core';
 
-const PROGRESS_IMAGE_URL = '@loaders.gl/image-api/test/data/img1-preview.jpeg';
+const PROGRESS_IMAGE_URL = '@loaders.gl/images/test/data/img1-preview.jpeg';
 
 test('progress#fetchProgress', async t => {
   t.ok(_fetchProgress, '_fetchProgress defined');
