@@ -22,8 +22,12 @@ export function makeResponse(resource) {
     headers['content-type'] = type;
   }
   if (url) {
-    headers['content-location'] = url;
+    // Since we can't control `Response.url` via constructor, use a custom header to record URL.
+    // https://stackoverflow.com/questions/3561381/custom-http-headers-naming-conventions
+    headers.url = url;
   }
+
+  // TODO - extract initial data
 
   if (typeof resource === 'string') {
     // Convert to ArrayBuffer to avoid treating as URL

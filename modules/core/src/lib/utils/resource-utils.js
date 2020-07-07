@@ -16,7 +16,8 @@ export function getResourceUrlAndType(resource, {isURL = true} = {}) {
 
   if (isBlob(resource)) {
     return {
-      url: stripQueryString(resource.url || ''),
+      // Only File (subclass of Blob) has name field
+      url: stripQueryString(resource.name || ''),
       type: resource.type || ''
     };
   }

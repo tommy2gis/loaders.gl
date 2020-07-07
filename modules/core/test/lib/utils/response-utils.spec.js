@@ -23,7 +23,7 @@ test('makeResponse', async t => {
   t.end();
 });
 
-test('makeResponse(File)', async t => {
+test.only('makeResponse(File)', async t => {
   if (isBrowser) {
     const file = new File(['abc'], 'foo.txt', {
       type: 'text/plain'
@@ -32,19 +32,15 @@ test('makeResponse(File)', async t => {
     t.equal(
       response.headers.get('content-length'),
       '3',
-      'content-length header was set by makeResponse'
+      '"content-length" header was set by makeResponse'
     );
     t.equal(
       response.headers.get('content-type'),
       'text/plain',
-      'content-type header was set by makeResponse'
+      '"content-type" header was set by makeResponse'
     );
     t.equal(response.url, '', 'response.url was clipped by Response constructor');
-    t.equal(
-      response.headers.get('content-location'),
-      'foo.txt',
-      'content-location header was set by makeResponse'
-    );
+    t.equal(response.headers.get('url'), 'foo.txt', '"url" header was set by makeResponse');
     const text = await response.text();
     t.equal(text, 'abc', 'could be read as text');
   }
