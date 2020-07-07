@@ -1,4 +1,4 @@
-import {getBinaryImageMIMEType, getBinaryImageSize} from '@loaders.gl/images';
+import {getBinaryImageMIMEType, getBinaryImageSize} from '@loaders.gl/image-api';
 import assert from '../utils/assert';
 import {UBER_POINT_CLOUD_EXTENSION} from '../gltf-constants';
 import GLBBuilder from './glb-builder';

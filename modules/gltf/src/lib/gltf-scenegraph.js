@@ -1,4 +1,4 @@
-import {getBinaryImageMIMEType} from '@loaders.gl/images';
+import {getBinaryImageMIMEType} from '@loaders.gl/image-api';
 import {padTo4Bytes, copyToArray} from '@loaders.gl/loader-utils';
 import assert from './utils/assert';
 import {

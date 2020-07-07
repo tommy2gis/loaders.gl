@@ -4,7 +4,7 @@
 import test from 'tape-promise/tape';
 import {parse, encodeSync} from '@loaders.gl/core';
 import {Tiles3DLoader, Tile3DWriter, TILE3D_TYPE} from '@loaders.gl/3d-tiles';
-import {ImageLoader} from '@loaders.gl/images';
+import {ImageLoader} from '@loaders.gl/image-api';
 import {loadRootTileFromTileset} from '../utils/load-utils';
 
 const WITH_BATCH_TABLE_URL =

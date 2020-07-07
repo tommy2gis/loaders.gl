@@ -1,6 +1,6 @@
 /* eslint-disable camelcase, max-statements, no-restricted-globals */
 /* global TextDecoder */
-import {ImageLoader} from '@loaders.gl/images';
+import {ImageLoader} from '@loaders.gl/image-api';
 import {parseJSON, getZeroOffsetArrayBuffer} from '@loaders.gl/loader-utils';
 import assert from './utils/assert';
 import {resolveUrl} from './gltf-utils/resolve-url';

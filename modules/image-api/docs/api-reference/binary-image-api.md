@@ -19,30 +19,26 @@ const arrayBuffer = await response.arrayBuffer();
 
 const metadata = getBinaryImageMetadata(arrayBuffer);
 if (medata) {
-  const {width, height, mimeTupe} = metadata;
+  const {width, height, mimeType} = metadata;
 }
 ```
 
 ## Functions
 
-### getBinaryImageMetadata(imageData: ArrayBuffer | DataView): boolean
+### getBinaryImageMetadata(imageData: ArrayBuffer | DataView): object | null
 
 Parameters:
 
 - `imageData`: Binary encoded image data.
 
-Returns a metadata object with if the binary data represents a known binary image format.
+Returns a metadata object describing the image. Returns `null` if the binary data does not represent a known binary image format.
 
 ```js
 {
-  metadata: string;
+  mimeType: string;
   width: number;
   height: number;
 }
 ```
-
-Throws:
-
-- if image is not in a supported binary format.
 
 If `mimeType` is supplied, assumes the image is of that type. If not supplied, first attempts to auto deduce the image format (see `getImageMIMEType`).

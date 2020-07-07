@@ -2,7 +2,7 @@ import {Vector3, Matrix4} from '@math.gl/core';
 import {Ellipsoid} from '@math.gl/geospatial';
 
 import {load} from '@loaders.gl/core';
-import {ImageLoader} from '@loaders.gl/images';
+import {ImageLoader} from '@loaders.gl/image-api';
 
 import {
   GL_TYPE_MAP,
