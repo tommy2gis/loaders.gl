@@ -3,7 +3,7 @@ import {parseMIMEType, parseMIMETypeFromURL} from './mime-type-utils';
 
 const QUERY_STRING_PATTERN = /\?.*/;
 
-export function getResourceUrlAndType(resource, {isURL = true} = {}) {
+export function getResourceUrlAndType(resource) {
   // If resource is a response, it contains the information directly
   if (isResponse(resource)) {
     const contentType = parseMIMEType(resource.headers.get('content-type'));
