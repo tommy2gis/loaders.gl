@@ -14,7 +14,7 @@ import {
 
 const IMAGE_TYPES = ['auto', 'image', 'imagebitmap', 'data'];
 
-const IMAGE_URL = '@loaders.gl/image-api/test/data/img1-preview.png';
+const IMAGE_URL = '@loaders.gl/images/test/data/img1-preview.png';
 
 let imagesPromise = null;
 

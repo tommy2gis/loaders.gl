@@ -1,7 +1,7 @@
 import {ImageLoader, isImageTypeSupported} from '@loaders.gl/images';
 import {fetchFile, parse} from '@loaders.gl/core';
 
-const TEST_URL = '@loaders.gl/image-api/test/data/tiles/colortile-256x256.png';
+const TEST_URL = '@loaders.gl/images/test/data/tiles/colortile-256x256.png';
 
 const OPTIONS = [
   {type: 'imagebitmap'},

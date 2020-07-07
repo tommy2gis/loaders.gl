@@ -14,7 +14,7 @@ const SVG_BITS = `\
 
 export const IMAGE_DATA_URL = `data:image/png;base64,${PNG_BITS}`;
 export const SVG_DATA_URL = `data:image/svg+xml;charset=utf-8,${SVG_BITS}`;
-export const IMAGE_URL = '@loaders.gl/image-api/test/data/img1-preview.png';
+export const IMAGE_URL = '@loaders.gl/images/test/data/img1-preview.png';
 
 export const TEST_CASES = [
   {

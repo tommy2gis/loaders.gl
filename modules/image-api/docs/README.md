@@ -1,20 +1,14 @@
 # Overview
 
-The `@loaders.gl/images` module contains loader and writers for images that follow loaders.gl conventions and work under both node and browser.
+The `@loaders.gl/image-api` module contains loader and writers for images that follow loaders.gl conventions and work under both node and browser.
 
 ## Installation
 
 ```bash
-npm install @loaders.gl/images
-npm install @loaders.gl/core
+npm install @loaders.gl/image-api
 ```
 
 ## API
-
-| Loader                                                          | Description |
-| --------------------------------------------------------------- | ----------- |
-| [`ImageLoader`](modules/images/docs/api-reference/image-loader) |             |
-| [`ImageWriter`](modules/images/docs/api-reference/image-writer) |             |
 
 ### Binary Image API
 

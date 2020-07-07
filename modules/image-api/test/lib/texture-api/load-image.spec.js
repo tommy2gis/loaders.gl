@@ -1,8 +1,8 @@
 import test from 'tape-promise/tape';
 import {loadImage, loadImageArray, loadImageCube, isImage} from '@loaders.gl/image-api';
 
-const LUT_URL = '@loaders.gl/image-api/test/data/ibl/brdfLUT.png';
-const PAPERMILL_URL = '@loaders.gl/image-api/test/data/ibl/papermill';
+const LUT_URL = '@loaders.gl/images/test/data/ibl/brdfLUT.png';
+const PAPERMILL_URL = '@loaders.gl/images/test/data/ibl/papermill';
 
 test('loadImage#mipLevels=0', async t => {
   const image = await loadImage(LUT_URL);
