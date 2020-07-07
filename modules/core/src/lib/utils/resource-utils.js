@@ -8,8 +8,10 @@ export function getResourceUrlAndType(resource, {isURL = true} = {}) {
   if (isResponse(resource)) {
     const contentType = parseMIMEType(resource.headers.get('content-type'));
     const urlType = parseMIMETypeFromURL(resource.url);
+    // Check for header injected by makeResponse
+    const urlHeader = resource.headers.get('url');
     return {
-      url: stripQueryString(resource.url || ''),
+      url: stripQueryString(resource.url || urlHeader || ''),
       type: contentType || urlType || null
     };
   }

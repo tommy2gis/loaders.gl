@@ -10,7 +10,7 @@ import {getErrorMessageFromResponse} from './fetch-error-message';
 // * File/Blob objects
 export async function fetchFile(url, options = {}) {
   if (typeof url !== 'string') {
-    return makeResponse(url);
+    return await makeResponse(url);
   }
 
   url = resolvePath(url);

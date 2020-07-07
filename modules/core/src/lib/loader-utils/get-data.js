@@ -75,7 +75,7 @@ export async function getArrayBufferOrStringFromData(data, loader) {
 
   // Blobs and files are FileReader compatible
   if (isBlob(data)) {
-    data = makeResponse(data);
+    data = await makeResponse(data);
   }
 
   if (isResponse(data)) {

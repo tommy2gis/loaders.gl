@@ -4,7 +4,7 @@
  *
  * @param resource
  */
-export function makeResponse(resource: any): Response;
+export function makeResponse(resource: any): Promise<Response>;
 
 /**
  * Checks response status (async) and throws a helpful error message if status is not OK.
