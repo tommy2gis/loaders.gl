@@ -1,7 +1,10 @@
+/** @typedef {import('@loaders.gl/gis').BinaryGeometryData} BinaryGeometryData */
 /* eslint-disable max-depth */
 import test from 'tape-promise/tape';
 import {fetchFile} from '@loaders.gl/core';
 import {binaryToGeoJson} from '@loaders.gl/gis';
+
+import GEOMETRY_TEST_CASES from '@loaders.gl/gis/test/data/geometry';
 
 const FEATURE_COLLECTION_TEST_CASES = '@loaders.gl/gis/test/data/featurecollection.json';
 
@@ -10,16 +13,21 @@ test('binary-to-geojson feature collections', async t => {
   const json = await response.json();
   const TEST_CASES = parseTestCases(json);
 
-  for (const [key, testCase] of Object.entries(TEST_CASES)) {
-    // Skip polygons test until working MultiPolygon parsing
-    if (key === 'polygons') {
-      // eslint-disable-next-line
-      continue;
-    }
-
+  for (const testCase of Object.values(TEST_CASES)) {
     if (testCase.geoJSON && testCase.binary) {
       t.deepEqual(binaryToGeoJson(testCase.binary), testCase.geoJSON.features);
     }
+  }
+
+  t.end();
+});
+
+test('binary-to-geojson geometries', t => {
+  for (const testCase of GEOMETRY_TEST_CASES) {
+    /** @type {BinaryGeometryData} */
+    // @ts-ignore
+    const binaryData = testCase.binary;
+    t.deepEqual(binaryToGeoJson(binaryData, binaryData.type, 'geometry'), testCase.geoJSON);
   }
 
   t.end();

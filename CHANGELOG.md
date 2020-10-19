@@ -1,6 +1,134 @@
 ## loaders.gl v2
 
+## v2.3 Release
+
+#### v2.3.0
+
+- Bump to math.gl@3.3.0 (#968)
+
 ## v2.3 Prereleases
+
+#### v2.3.0-beta.3
+
+- Fix image loader using imagebitmap options (#963)
+- i3s: handle nodepages (#960)
+- 3d-tiles: Fix encodeSync based tests (#962)
+- vb/draco metadata (#956)
+- draco: upgrade libs to version 1.3.6 (#959)
+
+#### v2.3.0-beta.2
+
+- Set isTileset to 'auto' in tile-3d to enable loading an external tileset json within a tile. (#947)
+- Draco: Fix for the case that extraAttributes are provided in options (#948)
+- Shapefile Multipolygon fix (#955)
+
+#### v2.3.0-beta.1
+
+- Added an I3S example that uses the Arcgis basemap. (#954)
+- Set worker url to local file for shapefile tests (#953)
+- website: Restore gltf frontpage
+- Delete less (#951)
+- [MVT] Fix tile index check (#950)
+
+#### v2.3.0-alpha.14
+
+- json: Fix streaming of array of arrays (#946)
+
+#### v2.3.0-alpha.13
+
+- draco: fixes draco3d memory leak (#944)
+- Fix docs link (#945)
+- draco: Custom attributes (#942)
+- gltf: parseGLBV1 function fixed (#943)
+- draco: Add draco3d types (#941)
+- Add support for extraAttributes in DracoLoader (#940)
+- Streaming shapefile fixes (#937)
+- las: add a safeguard for two bytes color detection (#935)
+- Shapefile: types (#931)
+
+#### v2.3.0-alpha.12
+
+- Reproject shapefile (#932)
+- obj: Add schema (#933)
+- pcd: Add schema (#930)
+- las: parse two-bytes colors (#927)
+- Shapefile: parse in batches (#925)
+- Coerce web stream from Uint8Array to ArrayBuffer (#929)
+- table: Add arrow-compatible types (#924)
+- Coerce each chunk of a Node stream to an ArrayBuffer (#928)
+- shapefile: cleanup (#923)
+- shapefile: rename files (#922)
+- compression: Support streaming (#871)
+- Crypto doc correction (#920)
+- Binary to GeoJson fix for individual geometries (#919)
+- gltf: partial support for GLBv1 and glTFv1 (#912)
+- shapefile: doc improvements (#917)
+- Shapefile: shp/dbf state parser (#913)
+- Include tsc in pre commit hook (#914)
+
+#### v2.3.0-alpha.11
+
+- Reprojection wrappers for binary and geojson (#906)
+- basis: Add CompressedTextureWriter (#909)
+- polyfills: Blob/File/FileReader polyfills (#907)
+- loader-utils: concatenateChunksAsync perf increase (#905)
+- shapefile: refactor DBF parser (#903)
+- shapefile: streaming (#901)
+- website: Bump deck.gl@8.2.5 (#900)
+- shapefile: detect magic number (#899)
+
+#### v2.3.0-alpha.10
+
+- Use namespace for node imports (#896)
+- typescript: gltf (#897)
+- typescript: enable math module (#895)
+- 3d-tiles: typescript (#894)
+- typescript updates (#893)
+- [Bug] Fix incorrect text/json mimeType (#892)
+
+#### v2.3.0-alpha.9
+
+    CI: fix cache (#891)
+    CI: add cache to .travis.yml (#890)
+    bump ocular-dev-tools: no generator transpile in es6 dist (#889)
+    pcd: color and normal attribute fixes (#888)
+    crypto: fix transform iterators (#887)
+    pcd: Fix color = 0 after loading (#886)
+    core: `parseInBatches` support for `options.transforms` (#883)
+
+#### v2.3.0-alpha.8
+
+    crypto: Add crc32c transform (#882)
+    Remove duplicate shapefile worker loader files (#881)
+    flatgeobuf: New module for flatgeobuf format (#880)
+    Docs: contributing.md cleanup (#878)
+    Use template contributing.md (#753)
+    crypto: fixes and cleanup (#876)
+    Fix name of indices returned from SHPLoader (#875)
+
+#### v2.3.0-alpha.7
+
+- Multipolygon parsing in binary-to-geojson conversion (#848)
+- crypto: New module for cryptographic hashing (#874)
+- compression: New module (#870)
+- las: upgrade the laz-perf script to the last version (#869)
+- gis loaders: Binary geospatial support via options.gis.format (#867)
+- core: makeResponse utility to unify handling of various input types (#787)
+- polyfills: Automatically decompress .gz files under Node (#866)
+- mvt: Fork @mapbox/vector-tile (prep for optimized binary loading) (#864)
+
+#### v2.3.0-alpha.6
+
+- core: selectLoader/selectLoaderSync split (#863)
+- build(deps): bump lodash from 4.17.15 to 4.17.19 (#858)
+- typescript: Enable strict checking (#861)
+- mvt: Add result.byteLength (#862)
+- mvt: Support binary output format (#860)
+- perf: prevent iterating through typed array if using SharedArrayBuffer (#859)
+
+#### v2.3.0-alpha.5
+
+- [Bug/Enhancement] Pass actual resource so inference can be done via getResouceUrlAndType (#857)
 
 #### v2.3.0-alpha.4
 

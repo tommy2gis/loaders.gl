@@ -37,6 +37,8 @@ test('ImageLoader#load(data URL)', async t => {
 });
 
 test(`ImageLoader#load({type: 'data'})`, async t => {
+  TEST_CASES.shift();
+  TEST_CASES.shift();
   for (const testCase of TEST_CASES) {
     const {title, url, width, height, skip} = testCase;
 
@@ -78,6 +80,27 @@ test('loadImage#formats', async t => {
       );
     }
   }
+
+  t.end();
+});
+
+test('loadImage#imagebitmap', async t => {
+  if (!isImageTypeSupported('imagebitmap')) {
+    t.comment('Browser only');
+    t.end();
+    return;
+  }
+  let image = await load(IMAGE_URL, ImageLoader, {
+    image: {type: 'imagebitmap'}
+  });
+  t.is(image.width, 480, 'Default imagebitmap options');
+
+  image = await load(IMAGE_URL, ImageLoader, {
+    image: {type: 'imagebitmap'},
+    imagebitmap: {resizeWidth: 240, resizeHeight: 160}
+  });
+
+  t.is(image.width, 240, 'Custom resizeWidth');
 
   t.end();
 });
